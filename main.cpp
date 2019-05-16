@@ -19,7 +19,6 @@ public:
 
         // initializes the 10 questions
         for (int i = 0; i < 10; i++){
-            //int x = rand.nextInt(11) + 1;
             int x = (rand() % 11) + 1;
             int y = (rand() % 11) + 1;
             int operatorId = rand() % 4;
@@ -63,7 +62,7 @@ public:
 
         std::cout << "Game Over, your score was: " << score << std::endl;
 
-        // clears the vector at the end of the game
+        // ensure the questions are deleted
         this->questions.clear();
 
     }
@@ -80,7 +79,6 @@ public:
 int main() {
     std::cout << "Hello, World!" << std::endl;
     Main main = Main();
-    //main.playGame();
     main.playMultipleGames();
     return 0;
 }
